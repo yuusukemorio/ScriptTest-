@@ -27,20 +27,18 @@ public class Boss
 
         if (mp >= 5)
         {
+            this.mp -= Magic;
             Debug.Log("魔法で" + Magic + "のダメージを与えた");
-        //残りmpを減らす
-        this.mp -= Magic;
-        Debug.Log(mp);
+
+            Debug.Log(mp);
 
         }
-
-        if (mp <= 5)
+        else
         {
             Debug.Log("MPが足りないみたいですよ");
+
         }
-
     }
-
 }
 
 public class Test : MonoBehaviour
@@ -57,15 +55,10 @@ public class Test : MonoBehaviour
         lastboss.Defence(3);
         // 魔法用の関数を呼び出す
 
-        for (int v = 0; v < 10; v++) {
+        for (int v = 0; v < 11; v++)
+        {
             lastboss.Magic(5);
 
-                }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        }
     }
 }
